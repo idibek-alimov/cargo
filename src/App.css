@@ -1,38 +1,185 @@
 .App {
   text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  position: relative;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup-box {
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  position: fixed;
+  background-color: transparent;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup-box .popup-wrapper {
+  opacity: 1;
+  position: relative;
+  background: linear-gradient(
+    281.54deg,
+    #eb5128 -12.72%,
+    #e39b52 47.24%,
+    #5d86dd 109.82%
+  );
+  padding: 40px;
+  border-radius: 30px;
+  height: fit-content;
+  width: 60%;
+  z-index: 102;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.popup-box .popup-wrapper .text {
+  color: white !important;
+}
+.popup-box .popup-wrapper .close-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+}
+.phone-box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  z-index: 1000000;
+  color: black;
+  margin: 0 20px 30px 0;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.we-chat-wrapper {
+  background-color: #5d86dd;
+  position: relative;
+}
+.we-chat-wrapper img {
+  height: 500px;
+  width: 500px;
+  box-shadow: 0px 0px 5px 5px rgb(236, 231, 231);
+  border-radius: 10px;
+}
+.we-chat-wrapper .close-box {
+  position: absolute;
+  right: 0;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+.phone-box .inner-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.phone-box .two {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.phone-box .inner-box .inner-child {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-evenly;
+}
+.phone-box .inner-box span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.phone-box .inner-box .phone-show-icon {
+  background-color: orangered;
+  width: 40px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 50%;
+  margin: 0px 0 0 10px;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.close-icon {
+  width: 40px;
+  height: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+:root {
+  --global_width: 1200px;
+  --global_max_width: 1800px;
+}
+@media only screen and (max-width: 600px) {
+  .popup-box {
   }
-  to {
-    transform: rotate(360deg);
+  .popup-box .popup-wrapper {
+    border-radius: 10px;
+    width: 90%;
+    padding: 40px 0 0 10px;
+  }
+  .popup-box .popup-wrapper .eleven-wrapper {
+    width: 95%;
+  }
+  .popup-box .popup-wrapper .close-box {
+    margin: 10px 10px 0 0;
+  }
+  .close-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .popup-box .popup-wrapper .text {
+    display: none !important;
+  }
+
+  .text-mini {
+    color: white;
+    display: flex !important;
+    text-align: left;
+    font-size: 16px !important;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+  }
+  .popup-box .inputs {
+    width: 80% !important;
+  }
+  .popup-box .popup-wrapper .eleven-wrapper textarea {
+    padding-top: 10px !important;
+    /* width: 95% !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    background-color: yellow !important; */
+  }
+  .popup-box .popup-wrapper button {
+    margin-bottom: 20px !important;
+  }
+  .we-chat-box {
+    width: 100% !important;
+  }
+  .we-chat-wrapper {
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    width: 90% !important;
+  }
+  .we-chat-wrapper img {
+    width: 100% !important;
+    object-fit: contain !important;
+    box-shadow: 0px 0px 5px 5px rgb(236, 231, 231);
+    border-radius: 10px;
+  }
+  .we-chat-wrapper .close-box {
+    position: absolute;
+    right: 0;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
   }
 }

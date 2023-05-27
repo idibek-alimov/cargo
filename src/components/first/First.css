@@ -1,0 +1,181 @@
+.first-box {
+  /* margin-top: 100px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  min-height: fit-content !important;
+  margin: 0 0 100px 0;
+  #first {
+    margin-bottom: 100px;
+  }
+}
+.first-box .first-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.first-box .first-wrapper .first-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 90%;
+}
+.first-box .first-wrapper .first-left h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  font-size: 44px;
+}
+.first-box .first-wrapper .first-left span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 29px;
+  text-align: left;
+}
+.first-box .first-wrapper .first-left button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: orange;
+  color: white;
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 3px 2px 1px rgb(213, 203, 203);
+}
+.first-box .first-wrapper .first-left .h1-mobile {
+  display: none;
+}
+.first-box .first-wrapper .first-left a {
+  color: white;
+  text-decoration: none;
+}
+.first-box .first-wrapper .first-right {
+  width: 65%;
+  height: 90%;
+}
+.first-box .first-wrapper .first-right img {
+  background-color: white;
+}
+.first-box .first-wrapper .first-right-mobile {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .first-box {
+    justify-content: flex-start;
+    height: fit-content;
+    margin: 0 0 0 0;
+    #first {
+      margin-bottom: 60px !important;
+    }
+    .first-wrapper {
+      width: 95%;
+      max-width: 95%;
+      height: fit-content !important;
+      padding-bottom: 5px;
+      .first-left {
+        width: 55% !important;
+        height: fit-content;
+      }
+      .first-left h1 {
+        font-size: 20px;
+        margin-top: 0px;
+      }
+      .first-left span {
+        font-size: 16px;
+        line-height: 110%;
+      }
+      .first-left button {
+        font-size: 14px;
+        padding: 7px 15px;
+      }
+      .first-right {
+        display: none;
+      }
+      .first-right-mobile {
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        margin: 20px 0 0 0;
+      }
+      .first-right-mobile img {
+        width: 100%;
+        height: 80%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .first-box {
+    width: 100%;
+    height: fit-content !important;
+    margin: -50px 0 0 0 !important;
+    justify-content: center;
+  }
+  .first-box {
+    #first {
+      margin-bottom: 100px !important;
+    }
+  }
+  .first-box .first-wrapper {
+    height: fit-content !important;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column-reverse;
+    height: fit-content !important;
+    padding-bottom: 10px;
+  }
+  .first-box .first-wrapper .first-right {
+    width: 100px !important;
+    height: auto;
+    object-fit: contain;
+  }
+  .first-box .first-right {
+    display: none;
+  }
+  .first-box .first-wrapper .first-right-mobile {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+  }
+  .first-box .first-wrapper .first-right-mobile img {
+    width: 100%;
+    height: 60%;
+  }
+  .first-box .first-wrapper .first-left {
+    width: 90% !important;
+  }
+  .first-box .first-wrapper .first-left .h1-desktop {
+    display: none;
+  }
+  .first-box .first-wrapper .first-left .h1-mobile {
+    width: 100%;
+    display: flex;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 110%;
+  }
+  .first-box .first-wrapper .first-left .secondary-text {
+    font-size: 25px;
+    margin: 20px 0 0 0;
+  }
+  .first-box .first-wrapper .first-left button:active {
+    background-color: rgb(184, 61, 17);
+    scale: 0.97;
+  }
+}

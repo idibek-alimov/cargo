@@ -1,0 +1,193 @@
+.end-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 0 0;
+  height: max-content !important;
+  background-color: black;
+}
+.end-box .end-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow-x: hidden;
+  height: max-content !important;
+  margin: 40px 0 30px 0;
+}
+.end-box .end-wrapper .top {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.end-box .end-wrapper .top .left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 25%;
+}
+.end-box .end-wrapper .top .left span {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+.end-box .end-wrapper .top .left .icon-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 0 0 -10px;
+}
+.end-box .end-wrapper .top .left .icon-box .icon {
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 0 0 10px;
+}
+.end-box .end-wrapper .top .middle {
+  width: 25%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.end-box .end-wrapper .top .middle a {
+  text-decoration: none;
+  color: white;
+}
+.end-box .end-wrapper .top .header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.end-box .end-wrapper .top .middle .middle-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  margin: 20px 0 0 0;
+}
+.end-box .end-wrapper .top .right {
+  width: 50%;
+  text-align: left;
+  height: max-content !important;
+}
+.end-box .end-wrapper .top .right .header {
+  margin-bottom: 40px;
+}
+.end-box .end-wrapper .top .right .info {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  margin: 20px 0 0 0;
+}
+.end-box .end-wrapper .document-box {
+  margin: 0px 0 0 0;
+}
+.end-box .end-wrapper .document-box .documentation {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  /* identical to box height */
+  margin: 5px 0 0 0;
+  text-decoration-line: none;
+  color: gray;
+}
+.end-box .end-wrapper .bottom {
+  width: 100%;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start !important;
+}
+.end-box .end-wrapper .bottom .ali-box {
+  width: 600px;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.end-box .end-wrapper .bottom span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 10px 0 0 0;
+}
+@media only screen and (max-width: 600px) {
+  .end-box {
+  }
+  .end-box .end-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 0 0 80px 0 !important;
+  }
+  .end-box .end-wrapper .top {
+    flex-wrap: wrap !important;
+    height: fit-content;
+  }
+  .end-box .end-wrapper .top .left {
+    width: 45%;
+  }
+  .end-box .end-wrapper .top .left span {
+    font-size: 26px;
+    margin-left: 2px;
+  }
+  .end-box .end-wrapper .top .left .icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 0 0 5px !important;
+  }
+  .end-box .end-wrapper .top .middle {
+    width: 45%;
+    margin: 0 0 0 20px;
+  }
+  .end-box .end-wrapper .top .header {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+  }
+  .end-box .end-wrapper .top .middle .middle-text {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+  }
+  .end-box .end-wrapper .top .right {
+    width: 100%;
+  }
+  .end-box .end-wrapper .top .right .header {
+    margin: 0 !important;
+  }
+  .end-box .end-wrapper .top .right .info {
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+  .end-box .end-wrapper .document-box {
+    display: none;
+  }
+  .end-box .end-wrapper .bottom {
+    margin: 20px 0 0 0;
+  }
+  .end-box .end-wrapper .bottom span {
+    margin: 3px 0 5px 0;
+  }
+  .end-box .end-wrapper .top .left .icon-box {
+    margin: 0 0 0 0px;
+  }
+}

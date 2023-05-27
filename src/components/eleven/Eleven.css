@@ -1,0 +1,232 @@
+.eleven-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content !important;
+  background-color: #eeeeee;
+}
+.eleven-box .eleven-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow-x: hidden;
+  height: max-content !important;
+  padding: 0 0 50px 0;
+  margin: 50px 0 0 0;
+}
+.eleven-box .eleven-wrapper .top {
+  width: 100%;
+  text-align: left;
+}
+.eleven-box .eleven-wrapper .top .header {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+}
+.text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  margin: 10px 0 0 0;
+  color: black !important;
+}
+.eleven-wrapper .text-mini {
+  display: none;
+}
+.eleven-wrapper .inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.eleven-box .eleven-wrapper .inputs input {
+  width: 45%;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+.eleven-box .eleven-wrapper .inputs textarea {
+  margin: 30px 0 0 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 20px;
+  height: 150px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  border-radius: 30px;
+}
+.eleven-box .eleven-wrapper .button-box {
+  width: 100%;
+  text-align: left;
+}
+.eleven-wrapper .button-box button {
+  background-color: #e39b52;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  /* identical to box height, or 29px */
+
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 20px 0 0 0;
+}
+
+.eleven-wrapper .inputs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.eleven-wrapper .inputs input {
+  width: 42%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+.eleven-wrapper textarea {
+  margin: 30px 0 0 0;
+  border: none;
+  outline: none;
+  width: 95%;
+  padding: 15px 20px;
+  height: 150px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  border-radius: 30px;
+}
+.eleven-wrapper .button-box {
+  width: 100%;
+  text-align: left;
+}
+.eleven-wrapper .button-box button {
+  background-color: #e39b52;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  /* identical to box height, or 29px */
+
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 0px rgb(88, 86, 86);
+}
+.eleven-wrapper .button-box button:active {
+  scale: 0.98;
+  background-color: #ab631b;
+}
+.eleven-wrapper .eleven-absolute-box {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: white;
+  margin: 0 0 10px 0;
+}
+.eleven-wrapper .eleven-absolute-box span {
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: black;
+}
+.eleven-wrapper .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: left;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .eleven-box .eleven-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 15px 0 0 0 !important;
+    padding: 0 0 10px 0;
+  }
+  .eleven-box .eleven-wrapper .top .header {
+    font-size: 20px;
+  }
+  .eleven-box .eleven-wrapper .text {
+    display: none;
+  }
+  .eleven-box .eleven-wrapper .text-mini {
+    display: flex;
+    text-align: left;
+    font-size: 14px;
+    color: black;
+  }
+  .eleven-wrapper .inputs {
+    width: 100% !important;
+  }
+  .eleven-wrapper .inputs input {
+    width: 100% !important;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 14px !important;
+    padding: 3px 0 3px 15px !important;
+  }
+  .eleven-wrapper textarea {
+    width: 95% !important;
+    font-size: 14px !important;
+    border-radius: 15px !important;
+    margin: 5px 0 0 0 !important;
+    padding: 10px 0 10px 15px !important;
+  }
+  .eleven-wrapper .button-box button {
+    font-size: 16px !important;
+    padding: 5px 10px !important;
+  }
+  .eleven-wrapper .eleven-absolute-box {
+    font-size: 14px;
+  }
+}

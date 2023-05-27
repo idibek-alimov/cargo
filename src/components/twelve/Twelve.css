@@ -1,0 +1,94 @@
+.twelve-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+.twelve-box .twelve-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 0 60px 0;
+}
+.twelve-box .twelve-wrapper .header {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+}
+.twelve-box .twelve-wrapper .items-wrapper {
+  margin: 40px 0 0 0;
+  width: 100%;
+  text-align: left;
+}
+.twelve-box .twelve-wrapper .items-wrapper .t-item-box {
+  margin: 5px 0 5px 0;
+  border-bottom: 1px solid orangered;
+}
+.twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 31px;
+  padding: 0 0 0 3px;
+}
+.twelve-box .twelve-wrapper .items-wrapper .t-item-box .answer-box {
+  display: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  padding: 0 0 0 3px;
+}
+.twelve-box .twelve-wrapper .items-wrapper .t-item-box .icon {
+  color: orangered;
+  width: 25px;
+  height: 25px;
+}
+@media only screen and (max-width: 600px) {
+  .twelve-box .twelve-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 20px 0 0 0;
+  }
+  .twelve-box .twelve-wrapper .header {
+    font-size: 24px;
+  }
+  .twelve-box .twelve-wrapper .items-wrapper {
+    margin: 10px 0 0 0;
+  }
+  .twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box span {
+    font-size: 14px;
+    line-height: 120%;
+    width: 90%;
+  }
+  .twelve-box .twelve-wrapper .items-wrapper .t-item-box .answer-box {
+    font-size: 14px;
+    line-height: 120%;
+  }
+  .twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box .icon {
+    width: 25px !important;
+    height: 20px !important;
+    size: 20px !important;
+    text-align: right;
+  }
+}

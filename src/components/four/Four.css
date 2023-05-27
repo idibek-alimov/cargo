@@ -1,0 +1,157 @@
+.four-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.four-box .four-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 50px 0 0 0;
+}
+.four-box .four-wrapper .left {
+  width: 49.5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.four-box .four-wrapper .left img {
+  width: 100%;
+}
+.four-box .four-wrapper .left .left-text {
+  background-color: white;
+  text-align: center;
+  width: fit-content;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: -60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.four-box .four-wrapper .right {
+  width: 49.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.four-box .four-wrapper .right .four-item-box {
+  background-color: #eeeeee;
+  margin: 0 0 20px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.four-box .four-wrapper .right .four-item-box span {
+  margin: 0 0 0 10px;
+  text-align: left;
+}
+.four-box .four-wrapper .right .four-end-text {
+  background-color: #eeeeee;
+  color: orange;
+  margin: 0 0 20px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  height: 40px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+@media only screen and (max-width: 1000px) {
+  .four-box {
+    .four-wrapper {
+      width: 95%;
+      max-width: 95%;
+      padding-bottom: 3px;
+      .left {
+        width: 50%;
+        .left-text {
+          font-size: 16px;
+          width: fit-content;
+          height: fit-content;
+          line-height: 120%;
+        }
+      }
+      .left img {
+        width: 95%;
+      }
+      .right {
+        width: 50%;
+        padding-bottom: 3px;
+        .four-item-box {
+          padding: 5px 15px;
+          margin: 2px 0 4px 0;
+        }
+        .four-item-box img {
+          width: 30px;
+        }
+        .four-item-box span {
+          font-size: 14px;
+        }
+        .four-end-text {
+          margin: 2px 0 0 0;
+          line-height: 110%;
+          padding: 7px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .four-box {
+    margin-bottom: 0;
+  }
+  .four-box .four-wrapper {
+    width: 90%;
+    max-width: 90%;
+    flex-direction: column;
+  }
+  .four-box .four-wrapper .left {
+    width: 100%;
+  }
+  .four-box .four-wrapper .left .left-text {
+    width: 60%;
+    font-size: 16px;
+    line-height: 110%;
+  }
+  .four-box .four-wrapper .right {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .four-box .four-wrapper .right .four-item-box {
+    height: 30px;
+  }
+  .four-box .four-wrapper .right .four-item-box img {
+    width: 30px;
+  }
+  .four-box .four-wrapper .right .four-item-box span {
+    font-size: 12px;
+  }
+  .four-box .four-wrapper .right .four-end-text {
+    font-size: 13px;
+    line-height: 110%;
+  }
+}

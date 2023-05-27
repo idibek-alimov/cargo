@@ -1,0 +1,272 @@
+.third-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+.third-box .third-wrapper {
+  width: var(--global_width);
+  max-width: var(--global_max_width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 60px 0 0 0;
+}
+.third-box .third-wrapper .header-text {
+  text-align: left;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+.third-box .third-wrapper .items-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 0 0;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box {
+  background: linear-gradient(204.75deg, #db241c -5.53%, #e39b52 104.88%);
+  height: 340px;
+  width: 282px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 0 0 0;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box div {
+  height: 25%;
+  width: 80%;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box .top span {
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 0 0 20px;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box div {
+  color: white;
+  text-align: left;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box h3 {
+  font-size: 25px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box span {
+  font-size: 24px;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box .item-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third-box .third-wrapper .items-wrapper .third-item-box .item-button button {
+  border: none;
+  outline: none;
+  color: #e39b52;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 2px 25px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 0px rgb(82, 78, 78);
+}
+.third-box
+  .third-wrapper
+  .items-wrapper
+  .third-item-box
+  .item-button
+  button:active {
+  scale: 0.96;
+  background-color: rgb(246, 239, 239);
+  color: #e69b50;
+}
+.third-box .third-wrapper .third-bottom-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  margin: 20px 0 0 0;
+}
+@media only screen and (max-width: 1000px) {
+  .third-box {
+    #third {
+      margin-bottom: 50px;
+    }
+    .third-wrapper {
+      margin: 0;
+      width: 95%;
+      max-width: 95%;
+      .header-text {
+        font-size: 24px;
+      }
+      .items-wrapper {
+        margin: 0;
+        width: 100%;
+        .third-item-box {
+          overflow: hidden;
+          width: 23%;
+          min-width: 150px;
+          height: 200px;
+          margin: 0;
+          padding: 10px 0 0 0;
+          .top img {
+            width: 30px;
+          }
+          .top span {
+            margin: 0 0 0 10px;
+            font-size: 20px;
+          }
+          .first {
+            width: 100%;
+            padding-left: 20px;
+            margin: 0;
+            height: fit-content;
+          }
+          .first h3 {
+            margin: 0;
+            font-size: 15px;
+            width: 100%;
+            min-width: fit-content !important;
+          }
+          .first span {
+            margin: 0;
+            font-size: 14px;
+          }
+          .second {
+            height: fit-content;
+            margin: 0;
+            width: 100%;
+            padding-left: 20px;
+          }
+          .second h3 {
+            margin: 0;
+            font-size: 15px;
+          }
+          .second span {
+            margin: 0;
+            font-size: 14px;
+          }
+          .item-button {
+            height: fit-content;
+            align-items: flex-start;
+            width: 100%;
+            padding-left: 25px;
+          }
+          .item-button button {
+            padding: 0;
+            width: 70%;
+            font-size: 14px;
+          }
+        }
+      }
+      .third-bottom-text {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .third-box {
+    width: 100%;
+  }
+  .third-box .third-wrapper {
+    width: 95%;
+    max-width: 95%;
+    overflow: hidden;
+    margin: 20px 0 0 0;
+  }
+  .third-box .third-wrapper .header-text {
+    font-size: 30px;
+  }
+  .third-box .third-wrapper .items-wrapper {
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+
+    margin: 20px 0 0 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box {
+    width: 160px;
+    height: 160px;
+    margin: 0 0 20px 0;
+    padding: 20px 0 10px 0px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .top {
+    margin: -10px 0 0 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .top img {
+    width: 30px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .top span {
+    font-size: 18px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first {
+    margin: -10px 0 0 0;
+    width: 80%;
+    padding: 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first h3 {
+    font-size: 13px;
+    width: 100% !important;
+    margin: 5px 0 5px 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first span {
+    font-size: 13px;
+    width: 100%;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .second {
+    width: 80%;
+    padding: 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .second h3 {
+    font-size: 13px;
+    width: 100% !important;
+    margin: 5px 0 5px 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .second span {
+    font-size: 13px;
+    width: 100%;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .item-button {
+    width: 90%;
+    padding: 0 0 0 10px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .item-button button {
+    width: 90%;
+    font-size: 16px;
+  }
+  .third-box .third-wrapper .third-bottom-text {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 351px) {
+  .third-box .third-wrapper .items-wrapper {
+    justify-content: center;
+  }
+}
