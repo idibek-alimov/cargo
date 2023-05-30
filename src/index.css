@@ -1,5 +1,19 @@
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 body {
   /* overflow-y: auto;

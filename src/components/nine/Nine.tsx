@@ -158,7 +158,7 @@ const Nine = () => {
             </div>
           ))}
         </div>
-        <div className="navigation-wrapper">
+        {/* <div className="navigation-wrapper">
           {[1, 2, 3, 4].map((item) => {
             if (info.current != item) {
               if (info.prev < info.current) {
@@ -198,20 +198,23 @@ const Nine = () => {
                 </m.div>
               );
           })}
-        </div>
-        {/* <div className="nav-button-wrapper">
+        </div> */}
+        <div className="nav-button-wrapper">
           <div
             className="icon-box"
             onClick={() => {
-              if (current === 1) {
-                setCurrent(4);
+              if (info.current === 1) {
+                //setCurrent(4);
+                //let place = info;
+                setInfo({ ...info, current: 4 });
               } else {
-                setCurrent(current - 1);
+                //setCurrent(current - 1);
+                setInfo({ ...info, current: info.current - 1 });
               }
             }}
           >
             <AiFillCaretLeft
-              size={30}
+              className="left-right-icon"
               color="white"
               style={{ marginLeft: -2 }}
             />
@@ -219,20 +222,22 @@ const Nine = () => {
           <div
             className="icon-box"
             onClick={() => {
-              if (current === 4) {
-                setCurrent(1);
+              if (info.current === 4) {
+                //setCurrent(1);
+                setInfo({ ...info, current: 1 });
               } else {
-                setCurrent(current + 1);
+                //setCurrent(current + 1);
+                setInfo({ ...info, current: info.current + 1 });
               }
             }}
           >
             <AiFillCaretRight
-              size={30}
+              className="left-right-icon"
               style={{ marginRight: -2 }}
               color="white"
             />
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

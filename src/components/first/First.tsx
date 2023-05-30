@@ -3,7 +3,7 @@ import "./First.css";
 const First = () => {
   return (
     <div className="first-box">
-      <div id="first" style={{ marginBottom: 100 }}></div>
+      <div id="first"></div>
       <div className="first-wrapper">
         <div className="first-left">
           <h1 className="h1-desktop">
@@ -30,6 +30,7 @@ const First = () => {
           <img src="hands.png" alt="n" className="first-img" />
         </div>
       </div>
+      <div id="second" style={{ marginBottom: 20 }}></div>
     </div>
   );
 };

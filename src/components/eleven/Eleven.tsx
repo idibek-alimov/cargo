@@ -40,19 +40,18 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
           {deliveryMethod || deliveryMethod != null ? (
             <div className="eleven-absolute-box">
               ВЫ ВЫБРАЛИ <span>{deliveryMethod}</span>
+              <div className="text absolute-bottom">
+                Напишите нам и получите бесплатную консультацию.
+              </div>
             </div>
           ) : (
-            ""
+            <div className="text jovid-text">
+              Напишите нам и получите бесплатную консультацию.
+            </div>
           )}
         </span>
-        <div className="text">
-          Напишите нам свои данные и комментарии о своих пожеланиях по товару, и
-          мы
-          <br /> проконсультируем вас в ближайшее время.
-        </div>
         <div className="text-mini">
-          Напишите нам свои данные и комментарии о своих пожеланиях по товару, и
-          мы проконсультируем вас в ближайшее время.
+          Напишите нам и получите бесплатную консультацию.
         </div>
         <div className="inputs">
           <input
@@ -74,15 +73,20 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
             }}
           />
         </div>
-        <textarea
-          placeholder="Комментарии"
-          //value={client.comment}
-          onChange={(event) => {
-            let placeholder: ElevenFormProp = client;
-            placeholder.comment = event.target.value;
-            setClient(placeholder);
-          }}
-        />
+        <div
+          style={{ overflow: "hidden", paddingRight: 5, width: "100%" }}
+          className="text-area-box"
+        >
+          <textarea
+            placeholder="Комментарии"
+            //value={client.comment}
+            onChange={(event) => {
+              let placeholder: ElevenFormProp = client;
+              placeholder.comment = event.target.value;
+              setClient(placeholder);
+            }}
+          />
+        </div>
         <div className="button-box">
           <button
             type="submit"

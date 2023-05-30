@@ -109,7 +109,11 @@ const Seven = () => {
       });
       if (!posted) {
         axios
-          .post("https://cargoapi.onrender.com/api/calculator/", info)
+          .post("https://cargoapi.onrender.com/api/calculator/", {
+            ...info,
+            deliveryPrice: summ,
+            deliveryTime: time,
+          })
           .then((res) => {
             console.log(res.data);
             setPosted(true);
@@ -186,10 +190,7 @@ const Seven = () => {
             type="number"
           />
         </div>
-        <div
-          className="item-box has-input"
-          style={{ position: "relative", overflow: "hidden" }}
-        >
+        <div className="item-box has-input" style={{ position: "relative" }}>
           <input
             placeholder="Масса единицы товара"
             type="number"
@@ -228,35 +229,29 @@ const Seven = () => {
             placeholder={"Пункт назначения"}
           />
         </div>
-        <div className="item-box radio-box">
-          <span>Страховка</span>
-          <div style={{ marginLeft: 10 }}>
-            <Radio
-              active={info.insurance}
-              setActive={(active: boolean) =>
-                sevenDispatch({
-                  type: AppActionsKind.ADD_INSURANCE,
-                  payload: Boolean(active),
-                })
-              }
-            />
+
+        <div className="radio-wrapper">
+          <div className="item-box radio-box">
+            <span>Страховка</span>
+            <div style={{ marginLeft: 10 }}>
+              <Radio
+                active={info.insurance}
+                setActive={(active: boolean) =>
+                  sevenDispatch({
+                    type: AppActionsKind.ADD_INSURANCE,
+                    payload: Boolean(active),
+                  })
+                }
+              />
+            </div>
           </div>
-          {/* <div
-            className="radio-item"
-            onClick={() => {
-              sevenDispatch({
-                type: AppActionsKind.ADD_INSURANCE,
-                payload: Boolean(!info.insurance),
-              });
-            }}
-          >
-            <div
-              className="radio-inner"
-              style={
-                info && info.insurance ? { backgroundColor: "#8C74C9" } : {}
-              }
-            ></div>
-          </div> */}
+          <span className="middle-hide hide-span">
+            Внимание! Данные приблизительные, для точной информации свяжитесь с
+            менеджером
+          </span>
+          <button className="middle-hide hide-button" onClick={clickHandle}>
+            Рассчитать стоимость
+          </button>
         </div>
         <div className="comment-box">
           <textarea

@@ -49,12 +49,6 @@ const End = () => {
             </div>
           </div>
           <div className="middle">
-            {/* <div className="header">Меню</div>
-            <div className="middle-text">О нас</div>
-            <div className="middle-text">Прайс</div>
-            <div className="middle-text">Калькулятор</div>
-            <div className="middle-text">Отзывы</div>
-            <div className="middle-text">Контакты</div> */}
             <a href="#second" className="header">
               О нас
             </a>

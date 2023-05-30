@@ -92,9 +92,10 @@
     height: 30px;
     justify-content: flex-start;
     margin: 4px 0 0 15px;
+    padding-left: 0;
   }
   .selector-box .selector-options {
-    margin: 28px 0 0 -1px;
+    margin: 25px 0 0 -1px !important;
     z-index: 100;
   }
   .selector-box .selector-options .selector-item {

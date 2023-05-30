@@ -58,6 +58,30 @@
   width: 25px;
   height: 25px;
 }
+@media only screen and (max-width: 1000px) {
+  .twelve-box {
+    .twelve-wrapper {
+      width: 95%;
+      max-width: 95%;
+      margin: 20px 0 0 0;
+      .header {
+        margin: 0;
+        font-size: 24px;
+      }
+      .items-wrapper {
+        .t-item-box {
+          .question-box span {
+            font-size: 18px;
+          }
+          .answer-box {
+            font-size: 18px;
+            line-height: 110%;
+          }
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   .twelve-box .twelve-wrapper {
     width: 95%;
@@ -86,9 +110,10 @@
     line-height: 120%;
   }
   .twelve-box .twelve-wrapper .items-wrapper .t-item-box .question-box .icon {
-    width: 25px !important;
-    height: 20px !important;
-    size: 20px !important;
+    width: 15px !important;
+    height: 15px !important;
+    size: 15px !important;
     text-align: right;
+    padding-bottom: 5px;
   }
 }

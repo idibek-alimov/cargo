@@ -44,6 +44,24 @@
   height: 25%;
   width: 80%;
 }
+.third-box .items-wrapper .third-icon {
+  width: 30px;
+  height: 30px;
+  font-weight: 800;
+}
+.third-box .third-wrapper .simple-truck {
+  width: 35px;
+  height: 35px;
+}
+.third-box .third-wrapper .train {
+  width: 35px;
+  height: 35px;
+}
+.third-box .items-wrapper .express-truck-icon {
+  height: 40px;
+  width: 40px;
+  font-weight: 500;
+}
 .third-box .third-wrapper .items-wrapper .third-item-box .top {
   display: flex;
   flex-direction: row;
@@ -57,7 +75,7 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 120%;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   margin: 0 0 0 20px;
 }
 .third-box .third-wrapper .items-wrapper .third-item-box div {
@@ -120,6 +138,8 @@
       width: 95%;
       max-width: 95%;
       .header-text {
+        margin-top: -20px;
+        margin-bottom: 20px;
         font-size: 24px;
       }
       .items-wrapper {
@@ -193,22 +213,25 @@
 @media only screen and (max-width: 600px) {
   .third-box {
     width: 100%;
+    padding-top: 0px !important;
   }
   .third-box .third-wrapper {
     width: 95%;
     max-width: 95%;
     overflow: hidden;
-    margin: 20px 0 0 0;
+    padding-top: 0px !important;
+    margin: 0px 0 0 0 !important;
   }
   .third-box .third-wrapper .header-text {
     font-size: 30px;
+    margin-top: 30px !important;
+    padding-top: 0px !important;
   }
   .third-box .third-wrapper .items-wrapper {
     justify-content: space-evenly;
     align-items: space-evenly;
     flex-wrap: wrap;
-
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 0 !important;
   }
   .third-box .third-wrapper .items-wrapper .third-item-box {
     width: 160px;
@@ -262,7 +285,27 @@
   }
   .third-box .third-wrapper .third-bottom-text {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 0 !important;
+  }
+
+  .third-box .items-wrapper .third-icon {
+    width: 23px;
+    height: 23px;
+    font-weight: 800;
+  }
+  .third-box .third-wrapper .simple-truck {
+    width: 26px;
+    height: 26px;
+  }
+  .third-box .third-wrapper .train {
+    width: 30px;
+    height: 30px;
+  }
+  .third-box .items-wrapper .express-truck-icon {
+    height: 34px;
+    width: 34px;
+    font-weight: 500;
   }
 }
 @media only screen and (max-width: 351px) {

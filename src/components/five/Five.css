@@ -76,7 +76,7 @@
   width: 90%;
   border: 1px solid rgb(223, 212, 212);
   border-radius: 40px;
-  box-shadow: 0 5px 1px 1px rgb(237, 229, 229);
+  /* box-shadow: 0 5px 1px 1px rgb(237, 229, 229); */
 }
 .header-middle-span {
   display: none;
@@ -84,7 +84,7 @@
 @media only screen and (max-width: 1000px) {
   .five-box {
     .header-middle-span {
-      display: flex;
+      display: none;
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 600;
@@ -97,7 +97,7 @@
     .five-wrapper {
       width: 95%;
       max-width: 95%;
-      margin: 0;
+      margin: 20px 0 0 0;
       .left {
         width: 50%;
         .text {
@@ -114,7 +114,10 @@
         }
       }
       .left span {
-        display: none;
+        display: flex;
+        font-size: 20px;
+        width: 100%;
+        line-height: 110%;
       }
       .right {
         width: 50%;
@@ -132,10 +135,12 @@
   .header-middle-span {
     display: none !important;
   }
+
   .five-box .five-wrapper {
     width: 90%;
     flex-direction: column-reverse;
     margin-top: 20px;
+    padding-bottom: 10px;
   }
 
   .five-box .five-wrapper .right {
@@ -146,7 +151,7 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 110%;
     width: 60%;
     text-align: center;
@@ -154,7 +159,7 @@
   }
   .five-box .five-wrapper .right img {
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 15px 0 0px 0;
   }
   .five-box .five-wrapper .left {
     width: 95%;
@@ -167,6 +172,7 @@
     width: 100%;
     text-align: justify;
     font-size: 16px;
+    margin: 0 0 20px 0 !important;
   }
   .five-box .five-wrapper .left .button-box {
     width: 100%;

@@ -9,7 +9,7 @@ const Six = () => {
         <h1>Калькулятор</h1>
         <div className="inner-box">
           <div className="left">
-            <img src={`six2.${width < 600 ? "jpg" : "svg"}`} />
+            <img src={`six2.${width < 600 ? "svg" : "svg"}`} />
           </div>
           <div className="right">
             <span>

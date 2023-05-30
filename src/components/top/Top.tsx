@@ -29,8 +29,17 @@ const Top = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
+              style={{ position: "relative" }}
             >
-              <RxCross2 size={30} style={{ fontWeight: "800" }} />
+              <RxCross2
+                size={30}
+                style={{
+                  fontWeight: "800",
+                  position: "absolute",
+                  top: 0,
+                  marginTop: -15,
+                }}
+              />
             </m.div>
           )}{" "}
           {!show && (

@@ -50,6 +50,21 @@
   justify-content: space-between;
   margin: 20px 0 0 0;
 }
+.eleven-wrapper .text-area-box {
+  background-color: green;
+  margin: 20px 0 0 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 130px;
+  background-color: white;
+  border-radius: 30px;
+}
+.eleven-wrapper .text-area-box textarea {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 15px 20px;
+}
 .eleven-box .eleven-wrapper .inputs input {
   width: 45%;
   border: none;
@@ -62,7 +77,7 @@
   font-size: 24px;
   line-height: 120%;
 }
-.eleven-box .eleven-wrapper .inputs textarea {
+/* .eleven-box .eleven-wrapper textarea {
   margin: 30px 0 0 0;
   border: none;
   outline: none;
@@ -75,7 +90,7 @@
   font-size: 24px;
   line-height: 120%;
   border-radius: 30px;
-}
+} */
 .eleven-box .eleven-wrapper .button-box {
   width: 100%;
   text-align: left;
@@ -182,6 +197,117 @@
   text-align: left;
   color: white;
 }
+@media only screen and (max-height: 390px) {
+  .eleven-wrapper {
+    width: 100% !important;
+  }
+  .eleven-wrapper .text-area-box {
+    background-color: white;
+    border-radius: 20px;
+  }
+  .eleven-wrapper .inputs input {
+    width: 43% !important;
+  }
+  .eleven-wrapper .inputs {
+    display: flex;
+    min-width: fit-content !important;
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .eleven-box {
+    .text-area-box {
+      margin: 20px 0 0 0 !important;
+      border-radius: 20px;
+    }
+    .eleven-wrapper {
+      width: 95%;
+      max-width: 95%;
+      margin: 20px 0 0 0;
+      padding: 0 0 10px 0;
+      .top {
+        .header {
+          font-size: 24px;
+        }
+      }
+      .text {
+        font-size: 14px !important;
+        margin: 0;
+      }
+
+      .inputs {
+        width: 100%;
+        margin: 10px 0 0 0;
+      }
+
+      .inputs input {
+        width: 100%;
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+      .button-box button {
+        font-size: 14px;
+        padding: 5px 15px;
+      }
+    }
+    .eleven-wrapper textarea {
+      font-size: 14px;
+      padding: 10px 15px;
+      border-radius: 15px;
+      margin: 0;
+      height: 100px;
+    }
+  }
+
+  .eleven-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0;
+    .top {
+      .header {
+        font-size: 24px;
+      }
+    }
+    .text {
+      font-size: 16px;
+      margin: 10px 0 10px 0;
+      padding-left: 15px !important;
+    }
+    .absolute-bottom {
+      font-size: 14px !important;
+      margin: 10px 0 -5px 0 !important;
+    }
+    .inputs {
+      width: 100%;
+      margin: 10px 0 0 0;
+    }
+    .inputs input {
+      width: 100%;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+    .button-box button {
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  }
+  /* .eleven-wrapper textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 0;
+    height: 100px;
+  } */
+  .eleven-absolute-box {
+    font-size: 14px !important;
+  }
+  .jovid-text {
+    margin-bottom: 20px !important;
+  }
+}
 @media only screen and (max-width: 600px) {
   .eleven-box .eleven-wrapper {
     width: 95%;
@@ -190,16 +316,18 @@
     padding: 0 0 10px 0;
   }
   .eleven-box .eleven-wrapper .top .header {
+    margin-top: 20px;
     font-size: 20px;
   }
-  .eleven-box .eleven-wrapper .text {
-    display: none;
+  .eleven-wrapper .text {
+    display: none !important;
   }
-  .eleven-box .eleven-wrapper .text-mini {
+  .eleven-wrapper .text-mini {
     display: flex;
     text-align: left;
     font-size: 14px;
     color: black;
+    padding-left: 8px !important;
   }
   .eleven-wrapper .inputs {
     width: 100% !important;
@@ -215,12 +343,17 @@
     font-size: 14px !important;
     padding: 3px 0 3px 15px !important;
   }
+  .eleven-wrapper .text-area-box {
+    width: 100% !important;
+    overflow: hidden;
+  }
   .eleven-wrapper textarea {
-    width: 95% !important;
     font-size: 14px !important;
     border-radius: 15px !important;
     margin: 5px 0 0 0 !important;
     padding: 10px 0 10px 15px !important;
+    width: 100% !important;
+    /* width: 100%; */
   }
   .eleven-wrapper .button-box button {
     font-size: 16px !important;

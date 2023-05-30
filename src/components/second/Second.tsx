@@ -3,13 +3,13 @@ import "./Second.css";
 const Second = () => {
   return (
     <div className="second-box">
-      <div id="second"></div>
+      {/* <div id="second"></div> */}
       <div className="second-wrapper">
         <div className="second-header">О нас</div>
         <div className="second-texts">
           <div className="inner-left">
             {/* <img src="./second-trucks.svg" /> */}
-            <img src="secondAngar.svg" />
+            <img src="secondAngar3.svg" />
           </div>
           <div className="inner-right">
             <div className="info">

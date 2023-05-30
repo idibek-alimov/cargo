@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Top from "./components/top/Top";
@@ -37,6 +37,8 @@ let emptyExtraClient: extraClientProp = {
 };
 
 function App() {
+  const popRef = useRef<HTMLDivElement>(null); //<React.HTMLAttributes<HTMLDivElement>>(null);
+  const weChatRef = useRef<HTMLDivElement>(null);
   const [client, clientDispatch] = useReducer(appReducer, emptyExtraClient);
   useEffect(() => {
     let a = document.querySelector(`.App`);
@@ -107,6 +109,42 @@ function App() {
   //     </div>
   //   );
   // };
+  useEffect(() => {
+    let handler = (event: TouchEvent | MouseEvent) => {
+      if (
+        weChatRef != null &&
+        weChatRef.current != null &&
+        !weChatRef.current.contains(event.target as Node)
+      ) {
+        clientDispatch({
+          type: AppActionsKind.REMOVE_WE_CHAT_SHOW,
+          payload: "hello",
+        });
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+  useEffect(() => {
+    let handler = (event: TouchEvent | MouseEvent) => {
+      if (
+        popRef != null &&
+        popRef.current != null &&
+        !popRef.current.contains(event.target as Node)
+      ) {
+        clientDispatch({
+          type: AppActionsKind.REMOVE_SHOW,
+          payload: "hello",
+        });
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
     <div className="App">
@@ -127,7 +165,7 @@ function App() {
                 duration: 0.4,
               }}
             >
-              <div className="we-chat-wrapper">
+              <div className="we-chat-wrapper" ref={weChatRef}>
                 <span
                   className="close-box"
                   onClick={() =>
@@ -148,6 +186,7 @@ function App() {
         <AnimatePresence>
           {client.show && (
             <m.div
+              // ref={popRef}
               className="popup-box"
               style={{ display: "flex" }}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -157,7 +196,7 @@ function App() {
                 duration: 0.4,
               }}
             >
-              <div className="popup-wrapper">
+              <div className="popup-wrapper" ref={popRef}>
                 <span
                   className="close-box"
                   onClick={() =>
