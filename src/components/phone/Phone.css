@@ -68,14 +68,18 @@
   width: 30px;
   height: 30px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .phone-box {
     width: 150px;
     height: 30px;
     margin: 0 10px 10px 0;
   }
+  .phone-box .inner-box {
+    min-width: fit-content !important;
+  }
   .phone-box .inner-box span {
-    font-size: 12px;
+    min-width: fit-content !important;
+    font-size: 11px !important;
     font-weight: 600;
     line-height: 100%;
   }

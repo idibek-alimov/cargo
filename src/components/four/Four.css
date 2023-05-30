@@ -80,7 +80,45 @@
   line-height: 21px;
 }
 @media only screen and (max-width: 1000px) {
-  .four-box {
+  .four-box .four-wrapper {
+    width: 95%;
+    max-width: 95%;
+    padding-bottom: 3px;
+  }
+  .four-box .four-wrapper .left {
+    width: 50%;
+  }
+  .four-box .four-wrapper .left .left-text {
+    font-size: 16px;
+    width: fit-content;
+    height: fit-content;
+    line-height: 120%;
+  }
+  .four-box .four-wrapper .left img {
+    width: 95%;
+  }
+  .four-box .four-wrapper .right {
+    width: 50%;
+    padding-bottom: 3px;
+  }
+  .four-box .four-wrapper .right .four-item-box {
+    padding: 5px 15px;
+    margin: 2px 0 4px 0;
+  }
+  .four-box .four-wrapper .right .four-item-box img {
+    width: 30px;
+  }
+  .four-box .four-wrapper .right .four-item-box span {
+    font-size: 14px;
+  }
+  .four-box .four-wrapper .right .four-end-text {
+    margin: 2px 0 0 0;
+    line-height: 110%;
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+  /* sfsdf */
+  /* .four-box {
     .four-wrapper {
       width: 95%;
       max-width: 95%;
@@ -118,7 +156,7 @@
         }
       }
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .four-box {

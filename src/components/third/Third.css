@@ -129,7 +129,82 @@
   margin: 20px 0 0 0;
 }
 @media only screen and (max-width: 1000px) {
-  .third-box {
+  .third-box #third {
+    margin-bottom: 50px;
+  }
+  .third-box .third-wrapper {
+    margin: 0;
+    width: 95%;
+    max-width: 95%;
+  }
+  .third-box .third-wrapper .header-text {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .third-box .third-wrapper .items-wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box {
+    overflow: hidden;
+    width: 23%;
+    min-width: 150px;
+    height: 200px;
+    margin: 0;
+    padding: 10px 0 0 0;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .top img {
+    width: 30px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .top span {
+    margin: 0 0 0 10px;
+    font-size: 20px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first {
+    width: 100%;
+    padding-left: 20px;
+    margin: 0;
+    height: fit-content;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first h3 {
+    margin: 0;
+    font-size: 15px;
+    width: 100%;
+    min-width: fit-content !important;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .first span {
+    margin: 0;
+    font-size: 14px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .second {
+    height: fit-content;
+    margin: 0;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .second h3 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .third-box .third-wrapper .items-wrapper .third-item-box .second span {
+    margin: 0;
+    font-size: 14px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .item-button {
+    height: fit-content;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .third-box .third-wrapper .items-wrapper .third-item-box .item-button button {
+    padding: 0;
+    width: 70%;
+    font-size: 14px;
+  }
+  /* fsdfsd */
+  /* .third-box {
     #third {
       margin-bottom: 50px;
     }
@@ -208,7 +283,7 @@
         text-align: center;
       }
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .third-box {

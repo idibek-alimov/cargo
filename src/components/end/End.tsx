@@ -49,7 +49,8 @@ const End = () => {
             </div>
           </div>
           <div className="middle">
-            <a href="#second" className="header">
+            <a className="header">Меню </a>
+            <a href="#second" className="middle-text">
               О нас
             </a>
             <a href="#third" className="middle-text">
@@ -88,8 +89,11 @@ const End = () => {
             </span>
           </div>
           <div className="document-box">
-            <div className="documentation">Документация</div>
-            <div className="documentation">Политика конфиденциальности</div>
+            {/* <div className="documentation">Документация</div> */}
+            <div className="documentation">Политика кофиденциальности</div>
+            <div className="documentation">
+              Cогласие на обработку персональных данных
+            </div>
           </div>
         </div>
       </div>

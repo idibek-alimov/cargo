@@ -207,7 +207,82 @@
   .seven-box .bottom-box {
     display: none !important;
   }
-  .seven-box {
+
+  .seven-box .seven-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 0;
+    padding: 40px 25px 20px 0;
+    justify-content: space-evenly;
+  }
+
+  /* sdf */
+  .seven-box .seven-wrapper .item-box {
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 40%;
+    border-radius: 20px;
+  }
+  .seven-box .seven-wrapper .radio-wrapper {
+    width: 40%;
+    margin: 0;
+  }
+  .seven-box .seven-wrapper .item-box input {
+    width: 100%;
+    font-size: 14px;
+    padding: 3px 15px;
+  }
+  .seven-box .seven-wrapper .has-input {
+    overflow: hidden;
+  }
+  .seven-box .seven-wrapper .radio-box {
+    width: 100% !important;
+    padding: 5px 0;
+  }
+  .seven-box .seven-wrapper .radio-box span {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+  .seven-box .seven-wrapper .comment-box {
+    margin: 0;
+    width: 40%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .seven-box .seven-wrapper .comment-box textarea {
+    font-size: 14px;
+    width: 90%;
+    padding: 10px 80px 10 20px;
+  }
+  .seven-box .seven-wrapper .bottom-box {
+    width: 85% !important;
+    margin: 10px 0 0 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .seven-box .seven-wrapper .bottom-box span {
+    font-size: 16px;
+    width: 50%;
+  }
+  .seven-box .seven-wrapper .bottom-box button {
+    font-size: 16px;
+    padding: 5px 15px;
+    width: fit-content;
+    min-width: fit-content;
+  }
+  .seven-box .seven-wrapper .calculate-box .calculate-item {
+    width: 40%;
+    font-size: 14px;
+  }
+  .seven-box .seven-wrapper .calculate-box .calculate-item div {
+    align-content: center;
+  }
+  .item-box .mass-span {
+    margin-top: 3px !important;
+  }
+  /* dsfsdf */
+  /* .seven-box {
     .seven-wrapper {
       width: 95%;
       max-width: 95%;
@@ -281,7 +356,7 @@
     .mass-span {
       margin-top: 3px !important;
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .seven-box {
@@ -386,8 +461,8 @@
   .seven-box .radio-wrapper {
     width: 90% !important;
     margin: 10px 0 0 0 !important;
-    .radio-box span {
-      padding-left: 0;
-    }
+  }
+  .seven-box .radio-wrapper .radio-box span {
+    padding-left: 0;
   }
 }

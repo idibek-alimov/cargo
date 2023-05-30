@@ -77,6 +77,61 @@
 @media only screen and (max-width: 1000px) {
   .eight-box {
     margin: 50px 0 0 0;
+  }
+  .eight-box .eight-wrapper {
+    overflow: hidden !important;
+    width: 95%;
+    max-width: 95%;
+  }
+  .eight-box .eight-wrapper .eight-header {
+    font-size: 24px;
+  }
+  .eight-box .eight-wrapper .text {
+    font-size: 18px;
+    margin: 15px 0 0 0;
+  }
+  .eight-box .eight-wrapper .items-box::-webkit-scrollbar {
+    display: none !important;
+  }
+  .eight-box .eight-wrapper .items-box {
+    margin: 10px 0 10px 0;
+    width: 100% !important;
+    height: 260px;
+    min-height: fit-content !important;
+    overflow-x: auto !important;
+    -ms-text-overflow: none !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+    white-space: nowrap;
+  }
+  .eight-box .eight-wrapper .items-box .eight-item-box {
+    margin: 0 10px 0 0px !important;
+    margin-left: 30px;
+    object-fit: contain !important;
+    width: 300px !important;
+    min-width: 300px;
+    background-color: white;
+    min-height: fit-content !important;
+    overflow: hidden;
+  }
+  .eight-box .eight-wrapper .items-box .eight-item-box img {
+    margin: 0 10px 0 10px;
+    width: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  .eight-box .eight-wrapper .eight-video-box {
+    height: fit-content !important;
+  }
+  .eight-box .eight-wrapper .items-box .eight-item-box :first-child {
+    margin: 0 0 0 -40px !important;
+  }
+  .eight-box .eight-wrapper .items-box::-webkit-scrollbar {
+    display: none !important;
+  }
+  /* dsfsd */
+  /* .eight-box {
+    margin: 50px 0 0 0;
     .eight-wrapper {
       overflow: hidden !important;
       width: 95%;
@@ -126,7 +181,7 @@
     .eight-box .eight-wrapper .items-box::-webkit-scrollbar {
       display: none !important;
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .eight-box {

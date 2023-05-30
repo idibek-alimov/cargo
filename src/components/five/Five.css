@@ -82,7 +82,55 @@
   display: none;
 }
 @media only screen and (max-width: 1000px) {
-  .five-box {
+  .five-box .header-middle-span {
+    display: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    width: 95%;
+    line-height: 100%;
+    text-align: center !important;
+    margin: 20px 0 0 0;
+  }
+  .five-box .five-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 20px 0 0 0;
+  }
+  .five-box .five-wrapper .left {
+    width: 50%;
+  }
+  .five-box .five-wrapper .left .text {
+    display: flex !important;
+    font-size: 14px;
+    width: 100%;
+  }
+  .five-box .five-wrapper .left .button-box {
+    width: 100%;
+  }
+  .five-box .five-wrapper .left .button-box button {
+    font-size: 16px;
+    padding: 3px 7px !important;
+  }
+  .five-box .five-wrapper .left span {
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    line-height: 110%;
+  }
+  .five-box .five-wrapper .right {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    padding: 10px 0 10px 0;
+  }
+  .five-box .five-wrapper .right img {
+    width: 90%;
+  }
+
+  /* dsfsdf */
+  /* .five-box {
     .header-middle-span {
       display: none;
       font-family: "Montserrat";
@@ -129,7 +177,7 @@
         width: 90%;
       }
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .header-middle-span {

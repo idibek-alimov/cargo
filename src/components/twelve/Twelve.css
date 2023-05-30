@@ -59,6 +59,24 @@
   height: 25px;
 }
 @media only screen and (max-width: 1000px) {
+  .twelve-box .twelve-wrapper {
+    width: 95%;
+    max-width: 95%;
+    margin: 20px 0 0 0;
+  }
+  .twelve-box .items-wrapper .header {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .twelve-box .items-wrapper .items-wrapper .t-item-box .question-box span {
+    font-size: 18px;
+  }
+  .twelve-box .items-wrapper .items-wrapper .t-item-box .answer-box {
+    font-size: 18px;
+    line-height: 110%;
+  }
+  /* dsfsdf */
   .twelve-box {
     .twelve-wrapper {
       width: 95%;
@@ -75,7 +93,7 @@
           }
           .answer-box {
             font-size: 18px;
-            line-height: 110%;
+            line-height: 100%;
           }
         }
       }

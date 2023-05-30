@@ -198,7 +198,7 @@
   .popup-box .popup-wrapper {
     width: 70%;
     height: 55% !important;
-    padding: 0px 0px 35px 20px;
+    padding: 20px 20px 35px 20px;
     margin-top: 0;
   }
   .phone-box .popup-wrapper .eleven-wrapper {
@@ -218,9 +218,14 @@
     width: 27px !important;
     height: 27px !important;
   }
+  .popup-box .popup-wrapper .text-area-box {
+    height: 80px;
+    margin: 0 0 15px 0 !important;
+  }
   .popup-box .popup-wrapper textarea {
     height: 70px !important;
     margin: 0px 0 5px 0 !important;
+    font-size: 14px;
   }
   .popup-box .popup-wrapper button {
     margin: 0 !important;

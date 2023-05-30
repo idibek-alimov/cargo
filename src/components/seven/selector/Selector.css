@@ -63,6 +63,21 @@
     padding: 3px 0px;
     width: 100% !important;
     max-width: 100% !important;
+  }
+  .selector-box .selector-text {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  .selector-box .selector-options {
+    margin: 35px 0 0 -1px !important;
+  }
+  .selector-box .selector-options .selector-item {
+    font-size: 14px;
+  }
+  /* .selector-box {
+    padding: 3px 0px;
+    width: 100% !important;
+    max-width: 100% !important;
     .selector-text {
       font-size: 14px;
       padding-left: 15px;
@@ -73,7 +88,7 @@
         font-size: 14px;
       }
     }
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   .selector-box {
