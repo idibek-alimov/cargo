@@ -109,7 +109,7 @@ const Seven = () => {
       });
       if (!posted) {
         axios
-          .post("http://1565515-cw55367.twc1.net:8080/api/calculator/", {
+          .post("http://1565515-cw55367.twc1.net:8000/api/calculator/", {
             ...info,
             deliveryPrice: summ,
             deliveryTime: time,
