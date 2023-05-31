@@ -109,7 +109,7 @@ const Seven = () => {
       });
       if (!posted) {
         axios
-          .post("https://cargoapi.onrender.com/api/calculator/", {
+          .post("http://77.232.136.109:8080/api/calculator/", {
             ...info,
             deliveryPrice: summ,
             deliveryTime: time,
