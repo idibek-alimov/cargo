@@ -24,7 +24,7 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     axios
-      .post("http://77.232.136.109:8080/api/client/", {
+      .post("http://1565515-cw55367.twc1.net:8080/api/client/", {
         ...client,
         deliveryMethod: deliveryMethod,
       })
