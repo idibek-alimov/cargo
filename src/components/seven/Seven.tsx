@@ -41,6 +41,7 @@ const Seven = () => {
       info &&
       info.name != "" &&
       info.number != "" &&
+      info.number.length >= 10 &&
       info.productType != "" &&
       info.productName != "" &&
       info.quantity != null &&
@@ -54,7 +55,7 @@ const Seven = () => {
       let time = 0;
       //      ["Одежда", "Обувь", "Хостовары", "Электроника"];
       if (
-        info.productType === "Хостовары" ||
+        info.productType === "Хозтовары" ||
         info.productType === "Электроника"
       ) {
         //["Авто", "Экспресс Авто", "Авиа", "Ж/Д"]
@@ -109,7 +110,7 @@ const Seven = () => {
       });
       if (!posted) {
         axios
-          .post("http://1565515-cw55367.twc1.net:8000/api/calculator/", {
+          .post("https://cargoapi.onrender.com/api/calculator/", {
             ...info,
             deliveryPrice: summ,
             deliveryTime: time,
@@ -121,7 +122,7 @@ const Seven = () => {
           .catch((err) => console.log(err));
       }
     } else {
-      alert("please fill out all the inputs");
+      alert("Пожалуйста заполните все поле");
     }
   };
   return (
@@ -155,7 +156,7 @@ const Seven = () => {
         </div>
         <div className="item-box">
           <Selector
-            options={["Одежда", "Обувь", "Хостовары", "Электроника"]}
+            options={["Одежда", "Обувь", "Хозтовары", "Электроника"]}
             func={(text) =>
               sevenDispatch({
                 type: AppActionsKind.ADD_PRODUCT_TYPE,

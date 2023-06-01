@@ -7,7 +7,7 @@ import { AppActionsKind } from "../../appDispatch";
 export interface ElevenFormProp {
   name: string;
   number: string;
-  comment: string | null;
+  comment: string;
   deliveryMethod: string | null;
 }
 export let emptyClient: ElevenFormProp = {
@@ -21,15 +21,32 @@ export interface Prop {
 }
 export const ElevenForm = ({ deliveryMethod }: Prop) => {
   const [client, setClient] = useState<ElevenFormProp>(emptyClient);
+  const [sent, setSent] = useState(false);
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    axios
-      .post("http://1565515-cw55367.twc1.net:8000/api/client/", {
-        ...client,
-        deliveryMethod: deliveryMethod,
-      })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    if (!sent) {
+      if (client.name.length > 0 && client.number.length >= 10) {
+        axios
+          .post("https://cargoapi.onrender.com/api/client/", {
+            ...client,
+            deliveryMethod: deliveryMethod,
+          })
+          .then((res) => {
+            alert("Ваш запрос принят");
+            setClient(emptyClient);
+            setSent(true);
+            clientDispatch({
+              type: AppActionsKind.REMOVE_SHOW,
+              payload: "hello",
+            });
+          })
+          .catch((err) => alert("что то пошло не так попробуйте еще раз"));
+      } else {
+        alert("Пожалуйста правильно заполните все поле");
+      }
+    } else {
+      setClient(emptyClient);
+    }
   };
   const { clientDispatch } = useGlobalContext();
   return (
@@ -56,20 +73,21 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
         <div className="inputs">
           <input
             placeholder="Имя"
+            value={client.name}
             onChange={(event) => {
-              let placeholder: ElevenFormProp = client;
-              placeholder.name = event.target.value;
-              setClient(placeholder);
+              // let placeholder: ElevenFormProp = client;
+              // placeholder.name = event.target.value;
+              setClient({ ...client, name: event.target.value });
             }}
             //value={client.name}
           />
           <input
             placeholder="Номер"
-            //value={client.number}
+            value={client.number}
             onChange={(event) => {
-              let placeholder: ElevenFormProp = client;
-              placeholder.number = event.target.value;
-              setClient(placeholder);
+              // let placeholder: ElevenFormProp = client;
+              // placeholder.number = event.target.value;
+              setClient({ ...client, number: event.target.value });
             }}
           />
         </div>
@@ -78,24 +96,25 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
           className="text-area-box"
         >
           <textarea
+            value={client.comment}
             placeholder="Комментарии"
             //value={client.comment}
             onChange={(event) => {
-              let placeholder: ElevenFormProp = client;
-              placeholder.comment = event.target.value;
-              setClient(placeholder);
+              // let placeholder: ElevenFormProp = client;
+              // placeholder.comment = event.target.value;
+              setClient({ ...client, comment: event.target.value });
             }}
           />
         </div>
         <div className="button-box">
           <button
             type="submit"
-            onClick={() => {
-              clientDispatch({
-                type: AppActionsKind.REMOVE_SHOW,
-                payload: "hello",
-              });
-            }}
+            // onClick={() => {
+            //   clientDispatch({
+            //     type: AppActionsKind.REMOVE_SHOW,
+            //     payload: "hello",
+            //   });
+            // }}
           >
             Отправить
           </button>

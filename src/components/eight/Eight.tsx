@@ -39,6 +39,7 @@ const Eight = () => {
               controls
               // style={{ borderRadius: 30 }}
               className="video"
+              poster="hands.png"
             >
               <source src="ksvideo.mp4" type="video/mp4" />
               <source src="ksvideo.mov" type="video/mov" />

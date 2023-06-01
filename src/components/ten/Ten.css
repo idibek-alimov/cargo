@@ -154,10 +154,19 @@
     margin: 10px 0 0 0;
   }
   .ten-box .ten-wrapper .left {
-    width: 100%;
+    width: 100% !important;
+    height: fit-content !important;
     margin: 20px 0 20px 0;
-  }
-  .ten-box .ten-wrapper .left {
+    overflow: hidden !important;
+    align-items: center !important;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+  .ten-box .ten-wrapper .left img {
+    object-fit: contain !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }

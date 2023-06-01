@@ -298,7 +298,7 @@
   .eleven-wrapper .text {
     font-size: 16px;
     margin: 10px 0 10px 0;
-    padding-left: 15px !important;
+    padding-left: 6px !important;
   }
   .eleven-wrapper .absolute-bottom {
     font-size: 14px !important;
@@ -326,6 +326,13 @@
     margin: 0;
     height: 100px;
   } */
+  .eleven-wrapper textarea {
+    font-size: 14px;
+    padding-left: 15px !important;
+  }
+  .eleven-wrapper .text-area-box {
+    border-radius: 15px;
+  }
   .eleven-absolute-box {
     font-size: 14px !important;
   }
