@@ -110,7 +110,7 @@ const Seven = () => {
       });
       if (!posted) {
         axios
-          .post("http://pop.kscargo.ru/api/calculator/", {
+          .post("https://pop.kscargo.ru/api/calculator/", {
             ...info,
             deliveryPrice: summ,
             deliveryTime: time,

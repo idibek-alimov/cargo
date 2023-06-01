@@ -27,7 +27,7 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
     if (!sent) {
       if (client.name.length > 0 && client.number.length >= 10) {
         axios
-          .post("http://pop.kscargo.ru/api/client/", {
+          .post("https://pop.kscargo.ru/api/client/", {
             ...client,
             deliveryMethod: deliveryMethod,
           })
