@@ -46,7 +46,7 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
           alert("Пожалуйста, заполните поле номера телефона правильно!");
         }
       } else {
-        alert("Пожалуйста правильно заполните все поле");
+        alert("Пожалуйста правильно заполните все поля!");
       }
     } else {
       setClient(emptyClient);

@@ -61,44 +61,92 @@ const Seven = () => {
           //["Авто", "Экспресс Авто", "Авиа", "Ж/Д"]
           if (info.deliveryMethod === "Авто") {
             summ = summ + info.quantity * info.mass * 2.3;
-            time = 20;
+            //"Москва", "Владивосток", "Регионы РФ"
+            if (info.address === "Москва") {
+              time = 25;
+            } else if (info.address === "Владивосток") {
+              time = 18;
+            } else if (info.address === "Регионы РФ") {
+              time = 27;
+            }
           } else if (info.deliveryMethod === "Экспресс Авто") {
             summ = summ + info.quantity * info.mass * 3;
-            time = 13;
+            if (info.address === "Москва") {
+              time = 15;
+            } else if (info.address === "Владивосток") {
+              time = 12;
+            } else if (info.address === "Регионы РФ") {
+              time = 17;
+            }
           } else if (info.deliveryMethod === "Авиа") {
-            summ = summ + info.quantity * info.mass * 4.3;
-            time = 8;
+            summ = summ + info.quantity * info.mass * 4;
+            if (info.address === "Москва") {
+              time = 9;
+            } else if (info.address === "Владивосток") {
+              time = 5;
+            } else if (info.address === "Регионы РФ") {
+              time = 11;
+            }
           } else if (info.deliveryMethod === "Ж/Д") {
-            summ = summ + info.quantity * info.mass * 3;
-            time = 36;
+            summ = summ + info.quantity * info.mass * 2;
+            if (info.address === "Москва") {
+              time = 35;
+            } else if (info.address === "Владивосток") {
+              time = 30;
+            } else if (info.address === "Регионы РФ") {
+              time = 37;
+            }
           }
         } else if (
           info.productType === "Одежда" ||
           info.productType === "Обувь"
         ) {
           if (info.deliveryMethod === "Авто") {
-            summ = summ + info.quantity * info.mass * 3.7;
-            time = 25;
+            summ = summ + info.quantity * info.mass * 3.3;
+            if (info.address === "Москва") {
+              time = 25;
+            } else if (info.address === "Владивосток") {
+              time = 18;
+            } else if (info.address === "Регионы РФ") {
+              time = 27;
+            }
           } else if (info.deliveryMethod === "Экспресс Авто") {
-            summ = summ + info.quantity * info.mass * 3.7;
-            time = 17;
+            summ = summ + info.quantity * info.mass * 4;
+            if (info.address === "Москва") {
+              time = 15;
+            } else if (info.address === "Владивосток") {
+              time = 12;
+            } else if (info.address === "Регионы РФ") {
+              time = 17;
+            }
           } else if (info.deliveryMethod === "Авиа") {
-            summ = summ + info.quantity * info.mass * 3.8;
-            time = 9;
+            summ = summ + info.quantity * info.mass * 6;
+            if (info.address === "Москва") {
+              time = 9;
+            } else if (info.address === "Владивосток") {
+              time = 5;
+            } else if (info.address === "Регионы РФ") {
+              time = 11;
+            }
           } else if (info.deliveryMethod === "Ж/Д") {
             summ = summ + info.quantity * info.mass * 3;
-            time = 37;
+            if (info.address === "Москва") {
+              time = 35;
+            } else if (info.address === "Владивосток") {
+              time = 30;
+            } else if (info.address === "Регионы РФ") {
+              time = 37;
+            }
           }
         }
         if (info.insurance) {
-          summ = summ + info.mass * info.quantity * 3;
+          summ = summ + info.mass * info.quantity * 1.5;
         }
         if (summ < 100) {
           summ = 100;
         }
         if (info.address === "Регионы РФ") {
           summ = summ + 150;
-          time = time + 2;
         }
         sevenDispatch({
           type: AppActionsKind.ADD_DELIVERY_PRICE,
