@@ -25,22 +25,26 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!sent) {
-      if (client.name.length > 0 && client.number.length >= 10) {
-        axios
-          .post("https://mail.kscargo.ru/api/client/", {
-            ...client,
-            deliveryMethod: deliveryMethod,
-          })
-          .then((res) => {
-            alert("Ваш запрос принят");
-            setClient(emptyClient);
-            setSent(true);
-            clientDispatch({
-              type: AppActionsKind.REMOVE_SHOW,
-              payload: "hello",
-            });
-          })
-          .catch((err) => alert("что то пошло не так попробуйте еще раз"));
+      if (client.name.length > 0 && client.number.length > 0) {
+        if (client.number.length >= 10) {
+          axios
+            .post("https://mail.kscargo.ru/api/client/", {
+              ...client,
+              deliveryMethod: deliveryMethod,
+            })
+            .then((res) => {
+              alert("Ваш запрос принят");
+              setClient(emptyClient);
+              setSent(true);
+              clientDispatch({
+                type: AppActionsKind.REMOVE_SHOW,
+                payload: "hello",
+              });
+            })
+            .catch((err) => alert("что то пошло не так попробуйте еще раз"));
+        } else {
+          alert("Пожалуйста, заполните поле номера телефона правильно!");
+        }
       } else {
         alert("Пожалуйста правильно заполните все поле");
       }

@@ -41,7 +41,6 @@ const Seven = () => {
       info &&
       info.name != "" &&
       info.number != "" &&
-      info.number.length >= 10 &&
       info.productType != "" &&
       info.productName != "" &&
       info.quantity != null &&
@@ -51,78 +50,82 @@ const Seven = () => {
       info.deliveryMethod != "" &&
       info.address != ""
     ) {
-      let summ = 0.0;
-      let time = 0;
-      //      ["Одежда", "Обувь", "Хостовары", "Электроника"];
-      if (
-        info.productType === "Хозтовары" ||
-        info.productType === "Электроника"
-      ) {
-        //["Авто", "Экспресс Авто", "Авиа", "Ж/Д"]
-        if (info.deliveryMethod === "Авто") {
-          summ = summ + info.quantity * info.mass * 3.3;
-          time = 20;
-        } else if (info.deliveryMethod === "Экспресс Авто") {
-          summ = summ + info.quantity * info.mass * 4;
-          time = 13;
-        } else if (info.deliveryMethod === "Авиа") {
-          summ = summ + info.quantity * info.mass * 5.6;
-          time = 8;
-        } else if (info.deliveryMethod === "Ж/Д") {
-          summ = summ + info.quantity * info.mass * 4;
-          time = 36;
+      if (info.number.length >= 10) {
+        let summ = 0.0;
+        let time = 0;
+        //      ["Одежда", "Обувь", "Хостовары", "Электроника"];
+        if (
+          info.productType === "Хозтовары" ||
+          info.productType === "Электроника"
+        ) {
+          //["Авто", "Экспресс Авто", "Авиа", "Ж/Д"]
+          if (info.deliveryMethod === "Авто") {
+            summ = summ + info.quantity * info.mass * 2.3;
+            time = 20;
+          } else if (info.deliveryMethod === "Экспресс Авто") {
+            summ = summ + info.quantity * info.mass * 3;
+            time = 13;
+          } else if (info.deliveryMethod === "Авиа") {
+            summ = summ + info.quantity * info.mass * 4.3;
+            time = 8;
+          } else if (info.deliveryMethod === "Ж/Д") {
+            summ = summ + info.quantity * info.mass * 3;
+            time = 36;
+          }
+        } else if (
+          info.productType === "Одежда" ||
+          info.productType === "Обувь"
+        ) {
+          if (info.deliveryMethod === "Авто") {
+            summ = summ + info.quantity * info.mass * 3.7;
+            time = 25;
+          } else if (info.deliveryMethod === "Экспресс Авто") {
+            summ = summ + info.quantity * info.mass * 3.7;
+            time = 17;
+          } else if (info.deliveryMethod === "Авиа") {
+            summ = summ + info.quantity * info.mass * 3.8;
+            time = 9;
+          } else if (info.deliveryMethod === "Ж/Д") {
+            summ = summ + info.quantity * info.mass * 3;
+            time = 37;
+          }
         }
-      } else if (
-        info.productType === "Одежда" ||
-        info.productType === "Обувь"
-      ) {
-        if (info.deliveryMethod === "Авто") {
-          summ = summ + info.quantity * info.mass * 4.7;
-          time = 25;
-        } else if (info.deliveryMethod === "Экспресс Авто") {
-          summ = summ + info.quantity * info.mass * 4.7;
-          time = 17;
-        } else if (info.deliveryMethod === "Авиа") {
-          summ = summ + info.quantity * info.mass * 5;
-          time = 9;
-        } else if (info.deliveryMethod === "Ж/Д") {
-          summ = summ + info.quantity * info.mass * 4;
-          time = 37;
+        if (info.insurance) {
+          summ = summ + info.mass * info.quantity * 3;
         }
-      }
-      if (info.insurance) {
-        summ = summ + info.mass * info.quantity * 3;
-      }
-      if (summ < 100) {
-        summ = 100;
-      }
-      if (info.address === "Регионы РФ") {
-        summ = summ + 150;
-        time = time + 2;
-      }
-      sevenDispatch({
-        type: AppActionsKind.ADD_DELIVERY_PRICE,
-        payload: Number(summ),
-      });
-      sevenDispatch({
-        type: AppActionsKind.ADD_DELIVERY_TIME,
-        payload: Number(time),
-      });
-      if (!posted) {
-        axios
-          .post("https://mail.kscargo.ru/api/calculator/", {
-            ...info,
-            deliveryPrice: summ,
-            deliveryTime: time,
-          })
-          .then((res) => {
-            console.log(res.data);
-            setPosted(true);
-          })
-          .catch((err) => console.log(err));
+        if (summ < 100) {
+          summ = 100;
+        }
+        if (info.address === "Регионы РФ") {
+          summ = summ + 150;
+          time = time + 2;
+        }
+        sevenDispatch({
+          type: AppActionsKind.ADD_DELIVERY_PRICE,
+          payload: Number(summ),
+        });
+        sevenDispatch({
+          type: AppActionsKind.ADD_DELIVERY_TIME,
+          payload: Number(time),
+        });
+        if (!posted) {
+          axios
+            .post("https://mail.kscargo.ru/api/calculator/", {
+              ...info,
+              deliveryPrice: summ,
+              deliveryTime: time,
+            })
+            .then((res) => {
+              console.log(res.data);
+              setPosted(true);
+            })
+            .catch((err) => console.log(err));
+        }
+      } else {
+        alert("Пожалуйста, заполните поле номера телефона правильно!");
       }
     } else {
-      alert("Пожалуйста заполните все поле");
+      alert("Пожалуйста, заполните все поля!");
     }
   };
   return (
