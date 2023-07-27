@@ -4,6 +4,7 @@ import Selector from "./selector/Selector";
 import { AppActionsKind, appReducer } from "./appDispatch";
 import axios from "axios";
 import Radio from "./radio/Radio";
+import { url } from "../../axios";
 
 export interface SevenProp {
   name: string;
@@ -158,7 +159,7 @@ const Seven = () => {
         });
         if (!posted) {
           axios
-            .post("https://mail.kscargo.ru/api/calculator/", {
+            .post(url + "/api/calculator/", {
               ...info,
               deliveryPrice: summ,
               deliveryTime: time,

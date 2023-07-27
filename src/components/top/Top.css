@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+
   height: 60px;
   background-color: white;
   z-index: 100;
@@ -23,7 +24,9 @@
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  /* Font size changed from 34 or 32 px i think */
+  font-size: 26px;
+
   cursor: pointer;
   text-decoration: none;
   color: black;

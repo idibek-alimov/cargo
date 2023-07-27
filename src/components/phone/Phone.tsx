@@ -37,12 +37,16 @@ const Phone = () => {
             </div>
             <div
               onClick={() =>
-                (window.location.href = "https://wa.me/+79090994293")
+                (window.location.href = "https://wa.me/+79267577577")
               }
             >
               <IoLogoWhatsapp className="message-icon" />
             </div>
-            <div onClick={() => (window.location.href = "https://t.me/Sijo03")}>
+            <div
+              onClick={() =>
+                (window.location.href = "https://t.me/SIJO_KS7577")
+              }
+            >
               <SiTelegram className="message-icon" />
             </div>
           </m.div>

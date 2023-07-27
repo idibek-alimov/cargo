@@ -3,6 +3,7 @@ import "./Eleven.css";
 import axios from "axios";
 import { useGlobalContext } from "../../AppContext";
 import { AppActionsKind } from "../../appDispatch";
+import { url } from "../../axios";
 
 export interface ElevenFormProp {
   name: string;
@@ -27,8 +28,9 @@ export const ElevenForm = ({ deliveryMethod }: Prop) => {
     if (!sent) {
       if (client.name.length > 0 && client.number.length > 0) {
         if (client.number.length >= 10) {
+          //"https://mail.kscargo.ru/api/client/"
           axios
-            .post("https://mail.kscargo.ru/api/client/", {
+            .post(url + "/api/client/", {
               ...client,
               deliveryMethod: deliveryMethod,
             })

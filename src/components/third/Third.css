@@ -38,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 40px 0 0 0;
+  padding: 10px 0 0 0;
 }
 .third-box .third-wrapper .items-wrapper .third-item-box div {
   height: 25%;
@@ -61,6 +61,7 @@
   height: 40px;
   width: 40px;
   font-weight: 500;
+  /* height: 100%; */
 }
 .third-box .third-wrapper .items-wrapper .third-item-box .top {
   display: flex;

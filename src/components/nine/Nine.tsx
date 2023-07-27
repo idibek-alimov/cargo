@@ -4,46 +4,55 @@ import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 import { RxDotFilled } from "react-icons/rx";
 import { motion as m, useAnimation } from "framer-motion";
+import { url } from "../../axios";
+import axios from "axios";
 interface NineItemProp {
   pic: string;
   name: string;
   company: string;
   comment: string;
 }
-let data: NineItemProp[] = [
-  {
-    pic: "person1.jpg",
-    name: "Андрей",
-    company: "ИП продавец на Вайлдберриз",
-    comment:
-      "Спасибо вашему карго за быструю доставку и качественный сервис. Спасибо Сиджо, с вами приятно общаться)",
-  },
-  {
-    pic: "person2.jpg",
-    name: "Валерия",
-    company: "ИП продавец на Озон",
-    comment:
-      "Не была до конца уверена в качестве, но после пробной партии убедилась. Тебе знаю где можно надёжно и стабильно заказывать ",
-  },
-  {
-    pic: "person3.jpg",
-    name: "Ян",
-    company: "Менеджер в ООО",
-    comment:
-      "Мне всё нравится. Искал оптимальный вариант. Спасибо помогли, а то раньше приходилось как-то пытаться объясняться с китайцами, а так вы облегчили мне работу!",
-  },
-  {
-    pic: "person4.jpg",
-    name: "Алеся",
-    company: "Сотрудник розничного магазина",
-    comment:
-      "Хорошие и справедливые цены. Подходят для меня. Я всем довольна. Отдельное спасибо за финансовую таблицу.",
-  },
-];
+// let data: NineItemProp[] = [
+//   {
+//     pic: "person1.jpg",
+//     name: "Андрей",
+//     company: "ИП продавец на Вайлдберриз",
+//     comment:
+//       "Спасибо вашему карго за быструю доставку и качественный сервис. Спасибо Сиджо, с вами приятно общаться)",
+//   },
+//   {
+//     pic: "person2.jpg",
+//     name: "Валерия",
+//     company: "ИП продавец на Озон",
+//     comment:
+//       "Не была до конца уверена в качестве, но после пробной партии убедилась. Тебе знаю где можно надёжно и стабильно заказывать ",
+//   },
+//   {
+//     pic: "person3.jpg",
+//     name: "Ян",
+//     company: "Менеджер в ООО",
+//     comment:
+//       "Мне всё нравится. Искал оптимальный вариант. Спасибо помогли, а то раньше приходилось как-то пытаться объясняться с китайцами, а так вы облегчили мне работу!",
+//   },
+//   {
+//     pic: "person4.jpg",
+//     name: "Алеся",
+//     company: "Сотрудник розничного магазина",
+//     comment:
+//       "Хорошие и справедливые цены. Подходят для меня. Я всем довольна. Отдельное спасибо за финансовую таблицу.",
+//   },
+// ];
 const Nine = () => {
   //const [current, setCurrent] = useState(1);
   const [info, setInfo] = useState<Prop>({ prev: 4, current: 1 });
   const [clicked, setClicked] = useState(1);
+  const [data, setData] = useState<NineItemProp[]>([]);
+  useEffect(() => {
+    axios
+      .get(url + "/api/feedback/")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log("fucking error from nine", err));
+  }, []);
   //   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   //   function handleClick() {
@@ -137,28 +146,29 @@ const Nine = () => {
       </div>
     );
   };
-  return (
-    <div className="nine-box">
-      <div id="nine" style={{ marginBottom: 60 }}></div>
-      <div className="nine-wrapper">
-        <div className="nine-header">Отзывы</div>
-      </div>
-      <div className="scroller-wrapper">
-        <div
-          className="items-wrapper"
-          // onScroll={handleScroll}
-          ref={containerRef}
-          // onScrollCapture={() => {
-          //   console.log("captured");
-          // }}
-        >
-          {data.map((item, index) => (
-            <div id={`slide-${index + 1}`}>
-              <NineItem {...item} />
-            </div>
-          ))}
+  if (data.length > 0)
+    return (
+      <div className="nine-box">
+        <div id="nine" style={{ marginBottom: 60 }}></div>
+        <div className="nine-wrapper">
+          <div className="nine-header">Отзывы</div>
         </div>
-        {/* <div className="navigation-wrapper">
+        <div className="scroller-wrapper">
+          <div
+            className="items-wrapper"
+            // onScroll={handleScroll}
+            ref={containerRef}
+            // onScrollCapture={() => {
+            //   console.log("captured");
+            // }}
+          >
+            {data.map((item, index) => (
+              <div id={`slide-${index + 1}`}>
+                <NineItem {...item} />
+              </div>
+            ))}
+          </div>
+          {/* <div className="navigation-wrapper">
           {[1, 2, 3, 4].map((item) => {
             if (info.current != item) {
               if (info.prev < info.current) {
@@ -199,48 +209,49 @@ const Nine = () => {
               );
           })}
         </div> */}
-        <div className="nav-button-wrapper">
-          <div
-            className="icon-box"
-            onClick={() => {
-              if (info.current === 1) {
-                //setCurrent(4);
-                //let place = info;
-                setInfo({ ...info, current: 4 });
-              } else {
-                //setCurrent(current - 1);
-                setInfo({ ...info, current: info.current - 1 });
-              }
-            }}
-          >
-            <AiFillCaretLeft
-              className="left-right-icon"
-              color="white"
-              style={{ marginLeft: -2 }}
-            />
-          </div>
-          <div
-            className="icon-box"
-            onClick={() => {
-              if (info.current === 4) {
-                //setCurrent(1);
-                setInfo({ ...info, current: 1 });
-              } else {
-                //setCurrent(current + 1);
-                setInfo({ ...info, current: info.current + 1 });
-              }
-            }}
-          >
-            <AiFillCaretRight
-              className="left-right-icon"
-              style={{ marginRight: -2 }}
-              color="white"
-            />
+          <div className="nav-button-wrapper">
+            <div
+              className="icon-box"
+              onClick={() => {
+                if (info.current === 1) {
+                  //setCurrent(4);
+                  //let place = info;
+                  setInfo({ ...info, current: 4 });
+                } else {
+                  //setCurrent(current - 1);
+                  setInfo({ ...info, current: info.current - 1 });
+                }
+              }}
+            >
+              <AiFillCaretLeft
+                className="left-right-icon"
+                color="white"
+                style={{ marginLeft: -2 }}
+              />
+            </div>
+            <div
+              className="icon-box"
+              onClick={() => {
+                if (info.current === 4) {
+                  //setCurrent(1);
+                  setInfo({ ...info, current: 1 });
+                } else {
+                  //setCurrent(current + 1);
+                  setInfo({ ...info, current: info.current + 1 });
+                }
+              }}
+            >
+              <AiFillCaretRight
+                className="left-right-icon"
+                style={{ marginRight: -2 }}
+                color="white"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  else return <div></div>;
 };
 
 export default Nine;

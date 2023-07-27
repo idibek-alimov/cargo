@@ -28,13 +28,15 @@ const End = () => {
                 <BsWechat className="icon" />
               </div>
               <div
-                onClick={() => (window.location.href = "https://t.me/Sijo03")}
+                onClick={() =>
+                  (window.location.href = "https://t.me/SIJO_KS7577")
+                }
               >
                 <TbBrandTelegram className="icon" />
               </div>
               <div
                 onClick={() =>
-                  (window.location.href = "https://wa.me/+79090994293")
+                  (window.location.href = "https://wa.me/+79267577577")
                 }
               >
                 <BsWhatsapp className="icon" />
@@ -68,7 +70,7 @@ const End = () => {
           </div>
           <div className="right">
             <div className="header">Контакты</div>
-            <div className="info">Тел.: 8 909 099 42 93</div>
+            <div className="info">Тел.: 8 926 757 75 77</div>
             <div className="info">Почта: kscargo7577@gmail.com</div>
             <div className="info">
               Офис: г. Москва, ул. Тихорецкий бульвар, 1 ст3

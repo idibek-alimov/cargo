@@ -177,7 +177,12 @@ function App() {
                 >
                   <MdCancel size={40} color="orangered" />
                 </span>
-                <img src="wechat.jpg" alt="hello" />
+                <span className="we-chat-text">Отсканируйте для WeChat</span>
+                <img
+                  src="wechatcargo.png"
+                  alt="hello"
+                  style={{ backgroundColor: "white" }}
+                />
               </div>
             </m.div>
           )}
