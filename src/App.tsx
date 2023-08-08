@@ -175,7 +175,12 @@ function App() {
                     })
                   }
                 >
-                  <MdCancel size={40} color="orangered" />
+                  <MdCancel
+                    // size={40}
+                    size={window.screen.width < 600 ? 25 : 40}
+                    color="orangered"
+                    className="we-chat-close-icon"
+                  />
                 </span>
                 <span className="we-chat-text">Отсканируйте для WeChat</span>
                 <img
