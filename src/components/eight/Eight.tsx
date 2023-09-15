@@ -78,7 +78,7 @@ const Eight = () => {
                 // height={window.screen.width > 600 ? 550 : 200}
                 controls
                 // style={{ borderRadius: 30 }}
-                className="video"
+                // className="video"
                 poster="hands.png"
               >
                 {/* <source src="ksvideo.mp4" type="video/mp4" />

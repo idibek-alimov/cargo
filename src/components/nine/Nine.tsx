@@ -187,7 +187,7 @@ const Nine = () => {
               }}
               className="show-video-text"
             >
-              show video
+              Смотреть видео
             </span>
           )}
         </div>
