@@ -24,16 +24,21 @@ import { MyGlobalContext } from "./AppContext";
 import { MdPermPhoneMsg, MdCancel } from "react-icons/md";
 import { IoLogoWhatsapp, IoMdClose } from "react-icons/io";
 import { SiTelegram } from "react-icons/si";
+import { BiChevronLeft } from "react-icons/bi";
 import { AnimatePresence, motion as m } from "framer-motion";
 import Phone from "./components/phone/Phone";
 export interface extraClientProp extends Prop {
   show: boolean;
   we_chat_show: boolean;
+  show_video: boolean;
+  video_link: string;
 }
 let emptyExtraClient: extraClientProp = {
   ...emptyClient,
   show: false,
   we_chat_show: false,
+  show_video: false,
+  video_link: "",
 };
 
 function App() {
@@ -120,6 +125,10 @@ function App() {
           type: AppActionsKind.REMOVE_WE_CHAT_SHOW,
           payload: "hello",
         });
+        clientDispatch({
+          type: AppActionsKind.REMOVE_VIDEO,
+          payload: "hello",
+        });
       }
     };
     document.addEventListener("mousedown", handler);
@@ -188,6 +197,52 @@ function App() {
                   alt="hello"
                   style={{ backgroundColor: "white" }}
                 />
+              </div>
+            </m.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {client.show_video && (
+            <m.div
+              className="popup-box video-box"
+              style={{ display: "flex" }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{
+                duration: 0.4,
+              }}
+            >
+              <div className="video-wrapper" ref={weChatRef}>
+                <span
+                  className="close-box"
+                  onClick={() =>
+                    clientDispatch({
+                      type: AppActionsKind.REMOVE_VIDEO,
+                      payload: "hello",
+                    })
+                  }
+                >
+                  {/* <MdCancel
+                    size={window.screen.width < 600 ? 25 : 40}
+                    color="orangered"
+                    className="we-chat-close-icon"
+                  /> */}
+                  <BiChevronLeft
+                    color="orangered"
+                    size={window.screen.width < 600 ? 30 : 50}
+                  />
+                </span>
+                <video
+                  // width={"100%"}
+                  // height={"100%"}
+                  controls
+                  className="video-itself"
+                  autoPlay
+                >
+                  <source src={client.video_link} type="video/mp4" />
+                </video>
               </div>
             </m.div>
           )}

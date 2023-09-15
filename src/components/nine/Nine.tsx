@@ -6,11 +6,14 @@ import { RxDotFilled } from "react-icons/rx";
 import { motion as m, useAnimation } from "framer-motion";
 import { url } from "../../axios";
 import axios from "axios";
+import { useGlobalContext } from "../../AppContext";
+import { AppActionsKind } from "../../appDispatch";
 interface NineItemProp {
   pic: string;
   name: string;
   company: string;
   comment: string;
+  video: string;
 }
 // let data: NineItemProp[] = [
 //   {
@@ -50,7 +53,10 @@ const Nine = () => {
   useEffect(() => {
     axios
       .get(url + "/api/feedback/")
-      .then((res) => setData(res.data))
+      .then((res) => {
+        setData(res.data);
+        console.log("Nine items", res.data);
+      })
       .catch((err) => console.log("fucking error from nine", err));
   }, []);
   //   const [, forceUpdate] = useReducer((x) => x + 1, 0);
@@ -133,11 +139,60 @@ const Nine = () => {
   //   }
   // };
   const NineItem = (item: NineItemProp) => {
+    // const [showVideo, setShowVideo] = useState(false);
+    const { clientDispatch } = useGlobalContext();
     return (
       <div className="nine-item-box">
-        <div className="left">
-          <img src={item.pic} />
+        <div className="video-box-v1">
+          dsfsfds
+          {/* 1
+          <video
+            width={"100%"}
+            height={"100%"}
+            // height={window.screen.width > 600 ? 550 : 200}
+            controls
+            // style={{ borderRadius: 30 }}
+            className="left-video"
+            autoPlay
+            // onEnded={() => setShowVideo(false)}
+          >
+            <source src={item.video} type="video/mp4" />
+          </video> */}
         </div>
+        {/* {showVideo ? (
+          <div className="left left-video-box">
+            <video
+              width={"100%"}
+              height={"100%"}
+              // height={window.screen.width > 600 ? 550 : 200}
+              controls
+              // style={{ borderRadius: 30 }}
+              className="left-video"
+              autoPlay
+              // onEnded={() => setShowVideo(false)}
+            >
+              <source src={item.video} type="video/mp4" />
+            </video>
+          </div>
+        ) : ( */}
+        <div className="left">
+          <img src={item.pic} className="left-image" />
+          {item.video && (
+            <span
+              onClick={() => {
+                clientDispatch({
+                  type: AppActionsKind.SHOW_VIDEO,
+                  payload: item.video,
+                });
+              }}
+              className="show-video-text"
+            >
+              show video
+            </span>
+          )}
+        </div>
+        {/* )} */}
+
         <div className="right">
           <div className="name">{item.name}</div>
           <p className="company">{item.company}</p>
