@@ -48,14 +48,14 @@ const Third = () => {
       number: 1,
       top_text: "Авто",
       first_text: "от 20",
-      second_text: "1.7 ",
+      second_text: "2 ",
     },
     {
       pic: `express-truck.${width < 600 ? "png" : "png"}`,
       number: 2,
       top_text: "Экспресс Авто",
       first_text: "от 12",
-      second_text: "2.5 ",
+      second_text: "3 ",
     },
     {
       pic: `plain.${width < 600 ? "png" : "png"}`,

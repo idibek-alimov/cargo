@@ -55,7 +55,7 @@ const Top = () => {
           )}
         </div>
         <a className="logo" href="#first">
-          KS Cargo 7577
+          KS Cargo
         </a>
         <div className="desktop-menu" style={{ width: "60%" }}>
           <Menu />

@@ -71,11 +71,16 @@
 }
 .five-box .five-wrapper .right {
   width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .five-box .five-wrapper .right img {
-  width: 90%;
-  border: 1px solid rgb(223, 212, 212);
-  border-radius: 40px;
+  width: 75%;
+  margin-left: 5%;
+  /* aspect-ratio: 4/5; */
+  /* border: 1px solid rgb(223, 212, 212); */
+  /* border-radius: 40px; */
   /* box-shadow: 0 5px 1px 1px rgb(237, 229, 229); */
 }
 .header-middle-span {
